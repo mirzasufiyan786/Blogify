@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("./partials/header") %>
+
+    <title>ADD NEW BLOG</title>
+  </head>
+
+  <body>
+    <%- include("./partials/navbar") %>
+    <div class="container mt-3">
+      <form action="/blog/add-blog" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="coverImg" class="form-label">Cover Image</label>
+            <input
+              type="file"
+              class="form-control"
+              id="coverImg"
+              name="coverImg"
+              aria-describedby="coverImg"
+            />
+          </div>
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            name="title"
+            aria-describedby="title"
+          />
+        </div>
+        <div class="mb-3">
+            <label for="body" class="form-label">Body</label>
+           <textarea class="form-control" name="body" id="body"></textarea>
+          </div>
+          <div class="mb-3">
+           <button class="btn btn-primary">Submit</button>
+          </div>
+      </form>
+    </div>
+    <%- include("./partials/script") %>
+  </body>
+</html>

@@ -18,7 +18,7 @@ const storage = multer.diskStorage({
   
   const upload = multer({ storage: storage })
 
-router.delete("/blog/:id", async (req, res) => {
+router.delete("/:id", async (req, res) => {
   try {
     await Blog.findByIdAndDelete(req.params.id);
     res.redirect("/"); 
